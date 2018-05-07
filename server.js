@@ -31,12 +31,9 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    res.send({
-        name: 'Ivan',
-        likes: [1, 2, 3]
-
+    res.render('landing-page.hbs', {
+        pageTitle: 'Landing Page'
     })
-    ;
 });
 
 const sendBoutMe = (req, res) => {
